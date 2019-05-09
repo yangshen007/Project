@@ -1,0 +1,107 @@
+{
+    "hot-goods01":{
+        "name" : "热卖商品",
+        "list" : [
+            {
+                "id" : "goods01",
+				"name" : "热卖商品01",
+				"src" : "hot-goods01.jpg",
+				"price" : "111"
+            },
+            {
+                "id" : "goods02",
+				"name" : "热卖商品02",
+				"src" : "hot-goods02.png",
+				"price" : "222"
+            },
+            {
+                "id" : "goods03",
+				"name" : "热卖商品03",
+				"src" : "hot-goods03.jpg",
+				"price" : "333"
+            },
+            {
+                "id" : "goods04",
+				"name" : "热卖商品04",
+				"src" : "hot-goods04.jpg",
+				"price" : "444"
+            },
+            {
+                "id" : "goods05",
+				"name" : "热卖商品05",
+				"src" : "hot-goods05.jpg",
+				"price" : "555"
+            }
+        ]
+    },
+    "hot-goods02":{
+        "name" : "热评商品",
+        "list" : [
+            {
+                "id" : "goods06",
+				"name" : "热卖商品06",
+				"src" : "hot-goods06.jpg",
+				"price" : "666"
+            },
+            {
+                "id" : "goods07",
+				"name" : "热卖商品07",
+				"src" : "hot-goods07.jpg",
+				"price" : "777"
+            },
+            {
+                "id" : "goods08",
+				"name" : "热卖商品08",
+				"src" : "hot-goods08.jpg",
+				"price" : "888"
+            },
+            {
+                "id" : "goods09",
+				"name" : "热卖商品9",
+				"src" : "hot-goods09.jpg",
+				"price" : "999"
+            },
+            {
+                "id" : "goods10",
+				"name" : "热卖商品10",
+				"src" : "hot-goods10.jpg",
+				"price" : "987"
+            }
+        ]
+    },
+    "hot-goods03":{
+        "name" : "新品上架",
+        "list" : [
+            {
+                "id" : "goods11",
+				"name" : "热卖商品11",
+				"src" : "hot-goods11.jpg",
+				"price" : "654"
+            },
+            {
+                "id" : "goods12",
+				"name" : "热卖商品12",
+				"src" : "hot-goods12.jpg",
+				"price" : "321"
+            },
+            {
+                "id" : "goods13",
+				"name" : "热卖商品13",
+				"src" : "hot-goods13.jpg",
+				"price" : "975"
+            },
+            {
+                "id" : "goods14",
+				"name" : "热卖商品14",
+				"src" : "hot-goods14.jpg",
+				"price" : "864"
+            },
+            {
+                "id" : "goods15",
+				"name" : "热卖商品15",
+				"src" : "hot-goods15.jpg",
+				"price" : "135"
+            }
+        ]
+    }
+}

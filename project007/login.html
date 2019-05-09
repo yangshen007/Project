@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+</head>
+<link rel="stylesheet" href="css/login.css">
+
+<body>
+    <div class="header-wrap">
+        <header class="public-head">
+            <div class="head-left1">
+                <a href="#">
+                    <img src="images/log_pic.png" alt="">
+                </a>
+            </div>
+            <div class="head-left2"></div>
+            <p><a href="#">关于我们</a></p>
+            <p><a href="#">帮助中心</a></p>
+        </header>
+    </div>
+
+    <div class="log-wrap">
+        <div class="log-wrap-center">
+            <div class="log-left">
+                <img src="images/login-leftpic.png" alt="">
+            </div>
+            <div class="log-right">
+                <div class="log-contain">
+                    <p>没有账号？<a href="javascript:;">免费注册</a></p>
+                    <!-- <form action=""> -->
+                    <div class="form">
+                        <div class="log-info">
+                            <i class="log1"></i>
+                            <input id="uname" type="text" placeholder="用户名/手机号">
+                        </div>
+                        <div class="log-info">
+                            <i class="log2"></i>
+                            <input id="upwd" type="text" placeholder="密码">
+                        </div>
+                        <div class="log-info">
+                            <i class="log3"></i>
+                            <input id="yzm" type="text" placeholder="请输入验证码">
+                        </div>
+                        <p><a href="javascript:;">忘记密码？</a></p>
+                        <div class="log-info info-sub">
+                            <input id="log" type="submit" value="登录">
+                        </div>
+                    </div>
+                    <!-- </form> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>
+            <a href="">首页</a> |
+            <a href="">招聘英才</a> |
+            <a href="">合作及洽谈</a> |
+            <a href="">联系我们</a> |
+            <a href="">关于我们</a> |
+            <a href="">友情链接</a>
+        </p>
+        <span>Copyright 2015 沪ICP备08001311号 | 营业执照</span>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    window.onload = function () {
+        $("#log").click(function () {
+            if (document.cookie) {
+                let userJson = getCookie("userinfo");
+                let uname = $("#uname").val();
+                let upwd = $("#upwd").val();
+                let yzm = $("#yzm").val();
+                console.log(uname, upwd, yzm)
+                if (uname == userJson.uname && upwd == userJson.upwd && yzm == userJson.yzm) {
+                    alert("登录成功");
+                    location.href = "index.html";
+                } else {
+                    alert("登录失败");
+                }
+            }
+        })
+    }
+</script>

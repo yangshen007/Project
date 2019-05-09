@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+</head>
+<link rel="stylesheet" href="css/register.css">
+
+<body>
+    <div class="header-wrap">
+        <header class="public-head">
+            <div class="head-left1">
+                <a href="#">
+                    <img src="images/log_pic.png" alt="">
+                </a>
+            </div>
+            <div class="head-left2"></div>
+            <p><a href="#">关于我们</a></p>
+            <p><a href="#">帮助中心</a></p>
+        </header>
+    </div>
+
+    <div class="register-bt">
+        <ul>
+            <li><span>1</span>设置用户名 </li>
+            <li><span>2</span>填写账号信息</li>
+            <li><span>3</span>注册成功</li>
+        </ul>
+    </div>
+
+    <!-- <form action="login.html" id="register-info" method="get"> -->
+    <div class="" id="register-info">
+        <div class="clearfix">
+            <i></i>
+            <input id="uname" type="text" placeholder="请输入您的账号/手机号" id="tel">
+            <span id="s1"></span>
+        </div>
+        <div class="info_yzm clearfix">
+            <i></i>
+            <input id="upwd" type="text" placeholder="请输入密码">
+            <span id="s2"></span>
+        </div>
+        <div class="info_pyzm clearfix">
+            <i></i>
+            <input id="yzm" type="text" placeholder="请输入手机验证码">
+            <button>获取手机验证码</button>
+            <span id="s3"></span>
+        </div>
+        <div class="agreen clearfix">
+            <input type="checkbox" checked="checked" />
+            <p>我已阅读并同意
+                <a href="#">服务协议</a>
+            </p>
+        </div>
+        <div class="next">
+            <input id="reg" type="submit" value="下一步" />
+        </div>
+    </div>
+    <!-- </form> -->
+
+    <div id="footer">
+        <p>
+            <a href="">首页</a> |
+            <a href="">招聘英才</a> |
+            <a href="">合作及洽谈</a> |
+            <a href="">联系我们</a> |
+            <a href="">关于我们</a> |
+            <a href="">友情链接</a>
+        </p>
+        <span>Copyright 2015 沪ICP备08001311号 | 营业执照</span>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    window.onload = function () {
+
+        // 表单验证
+        let $uname = $("#uname");
+        let $upwd = $("#upwd");
+        let $yzm = $("#yzm");
+
+        $("#reg").click(function () {
+            if (flag1 && flag2 && flag3) {
+                let userJson = {
+                    "uname": $uname.val(),
+                    "upwd": $upwd.val(),
+                    "yzm": $yzm.val()
+                }
+                setCookie("userinfo", JSON.stringify(userJson));
+                alert("注册成功");
+                location.href = "login.html";
+            } else {
+                alert("注册失败");
+            }
+        })
+
+        let flag1 = null;
+        $uname.blur(function () {
+            let reg1 = /^\w+$/;
+            if (reg1.test($(this).val())) {
+                flag1 = true;
+                $("#s1").html("ok");
+            } else {
+                $("#s1").html("用户名不合法")
+            }
+        })
+
+        let flag2 = null;
+        $upwd.blur(function () {
+            let reg2 = /^\d{6,}$/;
+            if (reg2.test($(this).val())) {
+                flag2 = true;
+                $("#s2").html("ok");
+            } else {
+                $("#s2").html("密码不合法")
+            }
+        })
+
+        let flag3 = null;
+        $yzm.blur(function () {
+            let reg3 = /^\d{4}$/;
+            if (reg3.test($(this).val())) {
+                flag3 = true;
+                $("#s3").html("ok");
+            } else {
+                $("#s3").html("验证码不正确")
+            }
+        })
+    }
+</script>

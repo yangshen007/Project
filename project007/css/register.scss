@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration:none;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+
+.header-wrap{
+    width:100%;
+    height:100px;
+    box-shadow: 2px 8px 6px #F4F4F4;
+    .public-head{
+        width:1200px;
+        height:100px;
+        margin:0 auto;
+        .head-left1{
+            float:left;
+            img{
+                max-width: 176px;
+                max-height: 54px;
+                margin: 20px 0;
+            }
+        }
+        .head-left2{
+            float:left;
+            width: 195px;
+            height: 60px;
+            background: url(../images/header-left.png) no-repeat left center;
+            margin: 20px 90px 0 20px;
+        }
+        p{
+            float:right;
+            margin-left:40px;
+            line-height:100px;
+            a{
+                color:#333;
+            }
+        }
+    }
+}
+
+.register-bt{
+    width:1200px;
+    height:37px;
+    margin:60px auto;
+    border-bottom: 2px solid #ddd;
+    ul{
+        line-height: 37px;
+        width:875px;
+        height: 37px;
+        margin:0 auto;
+        li{
+            font-size: 16px;
+            min-width: 100px;
+            float:left;
+            border-bottom: 2px solid #ff9801;
+            padding:0 50px;
+            margin:0 30px;
+            span{
+                display:inline-block;
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                color: #fff;
+                border-radius: 100%;
+                font-size: 14px;
+                background:#ff9801;
+                text-align: center;
+                margin-right:10px;
+            }
+        }
+    }
+}
+
+#register-info{
+    margin: 0px auto;
+    width: 570px;
+    // background:pink;
+    .clearfix{
+        width:400px;
+        height:25px;
+        line-height:25px;
+        padding:10px 0;
+        border:1px solid #ddd;
+        margin-bottom:30px;
+        position: relative;
+        span{
+            position: absolute;
+            top:0;
+            left:400px;
+            height:25px;
+            margin-top:10px;
+            margin-left:10px;
+            width:100px;
+        }
+        i{
+            display:inline-block;
+            width: 20px;
+            height:25px;
+            background: url(../images/register-tel-icon.png) 0 no-repeat;
+            margin-left: 15px;
+            padding-right:15px;
+            border-right:1px solid #ddd;
+            float:left;
+        }
+        input{
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            width: 320px;
+            color:#666;
+        }
+    }
+    .info_yzm{
+        i{
+            background:url(../images/register-yanzhengma-icon.png) 0 no-repeat;
+        } 
+    }
+    .info_pyzm{
+        i{
+            background:url(../images/register-yanzhengma-icon.png) 0 no-repeat;
+        }
+        button{
+            height:45px;
+            line-height: 45px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            width: 148px;
+            background: #ffa500;
+            color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            right:0;
+            top:0;
+        } 
+    }
+    .agreen{
+        border:none;
+        input{
+            margin-left:0;
+            width:25px;
+            float:left;
+            margin-top:6px;
+        }
+        p{
+            font-size: 12px;
+            margin-left:40px;
+        }
+    }
+    .next{
+        width:400px;
+        height:50px;
+        margin-bottom:30px;
+        input{
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            background: #ff9900;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 0px;
+            font-size: 16px;
+            outline:none;
+        }
+    }
+}
+#footer{// 底部
+    font-size:12px;
+    border-top: 1px solid #e7e7e7;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    p{
+        color: #666;
+        word-spacing: 5px;
+        padding: 10px 0;
+        a{color: #666;}
+    }
+}
